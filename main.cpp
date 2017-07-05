@@ -1,8 +1,13 @@
 #include <iostream>
-#include <GLFW/glfw3.h>
+#include <GL/glew.h>
 #include <GL/gl.h>
+#include <GLFW/glfw3.h>
 
 int main(void){
+
+	if(!glewInit())
+		return -1;
+
 	GLFWwindow* window;
 
 	if(!glfwInit())
